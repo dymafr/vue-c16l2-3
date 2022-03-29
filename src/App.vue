@@ -1,7 +1,11 @@
 <template>
   <div class="p-20">
     <button class="btn btn-primary" @click="show = !show">Cliquez !</button>
-    <Transition name="mon-animation" appear>
+    <Transition
+      enter-active-class="animate__animated zoomInDown"
+      leave-active-class="animate__animated zoomOutDown"
+      appear
+    >
       <p v-if="show">
         Principes fertur et exitiale aliquando oblato factitarunt quod
         propositum quod illo ob illo numquam obstinatum obstinatum quoque
@@ -27,22 +31,4 @@ const show = ref(true);
 
 <style lang="scss">
 @import './assets/scss/base.scss';
-
-@keyframes mon-animation {
-  0% {
-    transform: scale(0);
-  }
-  50% {
-    transform: scale(0.5, 1.5);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-.mon-animation-enter-active {
-  animation: mon-animation 0.5s;
-}
-.mon-animation-leave-active {
-  animation: mon-animation 0.5s reverse;
-}
 </style>
