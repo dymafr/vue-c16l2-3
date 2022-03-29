@@ -2,8 +2,8 @@
   <div class="p-20">
     <button class="btn btn-primary" @click="show = !show">Cliquez !</button>
     <Transition
-      enter-active-class="animate__animated zoomInDown"
-      leave-active-class="animate__animated zoomOutDown"
+      enter-active-class="animate__animated animate__zoomInDown"
+      leave-active-class="animate__animated animate__zoomOutDown"
       appear
     >
       <p v-if="show">
